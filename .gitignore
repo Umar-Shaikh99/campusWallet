@@ -73,3 +73,86 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# ==============================================
+# ADDED FOR COLLEGE EXPENSE APP SPECIFIC NEEDS
+# ==============================================
+
+# React Native specific
+.expo/
+dist/
+npm-debug.*
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Bundle directories (CRITICAL - From your project structure)
+/bundle
+/android/app/build/generated
+
+# Environment variables (SECURITY - Never commit these!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# Vendor directory (From your project structure)
+/vendor
+
+# Metro cache
+.metrocache/
+.metro/
+
+# Lottie cache
+.lottie/
+
+# NativeWind/Tailwind
+.nativewind/
+
+# Temporary files
+.temp/
+.tmp/
+.temp*/
+.tmp*/
+
+# Additional logs
+*.log
+logs/
+metro.log
+
+# React Native CLI cache
+.start/
+
+# Watchman
+.watchman/
+
+# Babel cache
+.babel-cache/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Package manager lock files (Choose one)
+# If using npm, keep package-lock.json
+# If using yarn, uncomment next line:
+# package-lock.json
+
+# Android specific additions
+android/app/build/
+android/.gradle/
+android/captures/
+android/*.hprof
+
+# iOS specific additions
+ios/build/
+ios/*.xcworkspace
+ios/*.mode1v3
+ios/*.mode2v3
+ios/*.perspectivev3
+ios/*.pbxuser
+DerivedData/
