@@ -1,11 +1,16 @@
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
+const { withNativeWind } = require('nativewind/metro');
+const path = require('path');
 
-/**
- * Metro configuration
- * https://reactnative.dev/docs/metro
- *
- * @type {import('@react-native/metro-config').MetroConfig}
- */
-const config = {};
+const config = getDefaultConfig(__dirname);
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+// Add resolver to handle react-dom imports for @react-aria compatibility
+config.resolver = {
+  ...config.resolver,
+  extraNodeModules: {
+    ...config.resolver?.extraNodeModules,
+    'react-dom': path.resolve(__dirname, 'src/utils/react-dom-shim.js'),
+  },
+};
+
+module.exports = withNativeWind(config, { input: './global.css' });

@@ -1,97 +1,198 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 💰 CampusWallet
 
-# Getting Started
+<div align="center">
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![React Native](https://img.shields.io/badge/React_Native-0.83-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![NativeWind](https://img.shields.io/badge/NativeWind-4.2-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## Step 1: Start Metro
+**A smart expense tracking app designed specifically for college students**
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Contributing](#-contributing)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+</div>
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## 📱 About
+
+CampusWallet helps college students take control of their finances by providing an intuitive way to track expenses, set budgets, and manage spending categories based on their living situation (hostel/PG or home).
+
+Whether you're managing your mess bills, splitting hostel rent, or tracking your canteen expenses, CampusWallet has you covered.
+
+## ✨ Features
+
+### 🎯 Smart Onboarding
+- Personalized setup flow with optional profile details
+- Monthly budget configuration with preset options (₹5,000 / ₹8,000 / ₹10,000)
+- Living type selection (Hostel/PG or Home) for customized categories
+- Auto-populated expense categories based on your living situation
+
+### 📊 Expense Tracking
+- Quick expense logging with category icons
+- Monthly budget overview
+- Category-wise spending breakdown
+- Persistent data storage with MMKV
+
+### 🎨 Modern UI/UX
+- Beautiful dark theme optimized for mobile
+- Smooth animations and transitions
+- Responsive design with NativeWind (Tailwind CSS)
+- Accessible component library (gluestack-ui)
+
+### 🔧 Developer Experience
+- Full TypeScript support
+- Modular Zustand stores with MMKV persistence
+- Clean project architecture
+- Comprehensive navigation setup
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | React Native CLI 0.83 |
+| **Language** | TypeScript 5.8 |
+| **Styling** | NativeWind 4.2 (Tailwind CSS) |
+| **UI Components** | gluestack-ui v3 |
+| **State Management** | Zustand 5.0 |
+| **Storage** | react-native-mmkv |
+| **Navigation** | React Navigation 7 |
+| **Icons** | Lucide React Native |
+| **Forms** | React Hook Form + Zod |
+| **Animations** | React Native Reanimated |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 20
+- React Native development environment ([Setup Guide](https://reactnative.dev/docs/environment-setup))
+- Android Studio / Xcode
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/campuswallet.git
+   cd campuswallet
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Install iOS pods** (macOS only)
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Start the app**
+   ```bash
+   # Android
+   npm run android
+
+   # iOS
+   npm run ios
+   ```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   └── stores/            # Zustand stores with MMKV persistence
+│       ├── useAppStore.ts
+│       ├── useOnboardingStore.ts
+│       └── storage.ts
+├── assets/                # Images, fonts, icons
+├── components/
+│   ├── onboarding/        # Onboarding-specific components
+│   └── ui/                # gluestack-ui components
+├── navigation/            # React Navigation setup
+├── screens/               # Screen components
+│   └── onboarding/        # Onboarding flow screens
+├── types/                 # TypeScript type definitions
+└── utils/                 # Utility functions
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🤝 Contributing
 
-### Android
+We welcome contributions from the community! Whether it's bug fixes, new features, or documentation improvements, your help is appreciated.
 
-```sh
-# Using npm
-npm run android
+### How to Contribute
 
-# OR using Yarn
-yarn android
-```
+1. **Fork the repository**
 
-### iOS
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+3. **Make your changes**
+   - Follow the existing code style
+   - Add TypeScript types for new code
+   - Test your changes on both Android and iOS
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+4. **Commit your changes**
+   ```bash
+   git commit -m "feat: add amazing feature"
+   ```
+   
+   We follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
 
-```sh
-bundle install
-```
+5. **Push and create a Pull Request**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
 
-Then, and every time you update your native dependencies, run:
+### Development Guidelines
 
-```sh
-bundle exec pod install
-```
+- Use TypeScript for all new files
+- Follow the existing folder structure
+- Use NativeWind for styling (avoid inline styles)
+- Keep components small and focused
+- Add proper types and interfaces
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Ideas for Contribution
 
-```sh
-# Using npm
-npm run ios
+- [ ] Expense analytics dashboard
+- [ ] Bill splitting with friends
+- [ ] Recurring expense reminders
+- [ ] Export data to CSV/PDF
+- [ ] Dark/Light theme toggle
+- [ ] Multi-currency support
+- [ ] Cloud backup integration
 
-# OR using Yarn
-yarn ios
-```
+---
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 📄 License
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 🙏 Acknowledgments
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- [gluestack-ui](https://gluestack.io/) for the beautiful component library
+- [NativeWind](https://www.nativewind.dev/) for Tailwind CSS in React Native
+- [Lucide](https://lucide.dev/) for the icon set
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+<div align="center">
 
-## Congratulations! :tada:
+**Built with ❤️ for students, by students**
 
-You've successfully run and modified your React Native App. :partying_face:
+⭐ Star this repo if you find it helpful!
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+</div>
