@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, ButtonText } from '@/src/components/ui/button';
 import { Icon } from '@/src/components/ui/icon';
 import { User, GraduationCap } from 'lucide-react-native';
-import { StepIndicator } from '@/src/components/onboarding';
+import { StepIndicator } from '@/src/components/custom';
 import { useOnboardingStore } from '@/src/app/stores/useOnboardingStore';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { OnboardingStackParamList } from '@/src/navigation/types';

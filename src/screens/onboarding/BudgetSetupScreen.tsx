@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, ButtonText } from '@/src/components/ui/button';
 import { Icon } from '@/src/components/ui/icon';
 import { ArrowLeft, ArrowRight, Wallet } from 'lucide-react-native';
-import { StepIndicator, BudgetInput } from '@/src/components/onboarding';
+import { StepIndicator, AmountInput } from '@/src/components/custom';
 import { useOnboardingStore } from '@/src/app/stores/useOnboardingStore';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { OnboardingStackParamList } from '@/src/navigation/types';
@@ -38,9 +38,12 @@ export function BudgetSetupScreen({ navigation }: Props) {
         </Text>
 
         {/* Budget input */}
-        <BudgetInput 
+        <AmountInput 
           value={onboardingData.monthlyBudget} 
-          onChange={setMonthlyBudget} 
+          onChange={setMonthlyBudget}
+          currencySymbol="₹"
+          helperText="Enter your total monthly spending allowance"
+          presets={[5000, 8000, 10000]}
         />
 
         {/* Bottom section */}
