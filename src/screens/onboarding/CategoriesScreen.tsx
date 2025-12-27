@@ -4,10 +4,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, ButtonText } from '@/src/components/ui/button';
 import { Icon } from '@/src/components/ui/icon';
 import { ArrowLeft, ArrowRight, Wallet } from 'lucide-react-native';
-import { StepIndicator, CategoryChip } from '@/src/components/onboarding';
+import * as LucideIcons from 'lucide-react-native';
+import { StepIndicator, Chip } from '@/src/components/custom';
 import { useOnboardingStore } from '@/src/app/stores/useOnboardingStore';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { OnboardingStackParamList } from '@/src/navigation/types';
+
+// Helper to get icon component from string name
+function getIconByName(iconName: string) {
+  const icons = LucideIcons as unknown as Record<string, React.ComponentType<any>>;
+  return icons[iconName] || LucideIcons.Circle;
+}
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'Categories'>;
 
@@ -41,7 +48,7 @@ export function CategoriesScreen({ navigation }: Props) {
         <View className="flex-row flex-wrap gap-3">
           {onboardingData.selectedCategories.map((category) => (
             <View key={category.id} className="w-[48%]">
-              <CategoryChip category={category} />
+              <Chip label={category.name} icon={getIconByName(category.icon)} />
             </View>
           ))}
         </View>
