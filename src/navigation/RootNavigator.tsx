@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useOnboardingStore } from '@/src/app/stores/useOnboardingStore';
 import { BottomTabNavigator } from './BottomTabNavigator';
 import { OnboardingNavigator } from './OnboardingNavigator';
+import { AddExpenseNavigator } from './AddExpenseNavigator';
 import type { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -17,7 +18,14 @@ export function RootNavigator() {
         {!isOnboarded ? (
           <Stack.Screen name="Onboarding" component={OnboardingNavigator} />
         ) : (
-          <Stack.Screen name="MainTabs" component={BottomTabNavigator} />
+          <>
+            <Stack.Screen name="MainTabs" component={BottomTabNavigator} />
+            <Stack.Screen 
+              name="AddExpense" 
+              component={AddExpenseNavigator}
+              options={{ presentation: 'modal' }}
+            />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>
