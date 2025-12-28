@@ -11,17 +11,41 @@ export type OnboardingStackParamList = {
   Categories: undefined;
 };
 
+// Add Expense Stack Navigator param list
+export type AddExpenseStackParamList = {
+  AddExpenseAmount: {
+    categoryId: string;
+    categoryName: string;
+    categoryIcon: string;
+  };
+  AddExpenseDetails: {
+    amount: number;
+    categoryId: string;
+    categoryName: string;
+    categoryIcon: string;
+  };
+  AddExpenseSuccess: {
+    amount: number;
+    categoryName: string;
+    categoryIcon: string;
+    note: string;
+    date: string;
+  };
+};
+
 // Bottom Tab Navigator param list
 export type BottomTabParamList = {
   Home: undefined;
-  Expenses: undefined;
-  Settings: undefined;
+  Analytics: undefined;
+  Wallet: undefined;
+  Profile: undefined;
 };
 
 // Root Stack Navigator param list
 export type RootStackParamList = {
   Onboarding: NavigatorScreenParams<OnboardingStackParamList>;
   MainTabs: NavigatorScreenParams<BottomTabParamList>;
+  AddExpense: NavigatorScreenParams<AddExpenseStackParamList>;
 };
 
 // Screen props types
@@ -30,6 +54,9 @@ export type RootStackScreenProps<T extends keyof RootStackParamList> =
 
 export type OnboardingStackScreenProps<T extends keyof OnboardingStackParamList> =
   NativeStackScreenProps<OnboardingStackParamList, T>;
+
+export type AddExpenseStackScreenProps<T extends keyof AddExpenseStackParamList> =
+  NativeStackScreenProps<AddExpenseStackParamList, T>;
 
 export type BottomTabScreenPropsType<T extends keyof BottomTabParamList> =
   CompositeScreenProps<

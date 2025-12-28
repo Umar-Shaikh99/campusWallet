@@ -4,17 +4,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, ButtonText } from '@/src/components/ui/button';
 import { Icon } from '@/src/components/ui/icon';
 import { ArrowLeft, ArrowRight, Wallet } from 'lucide-react-native';
-import * as LucideIcons from 'lucide-react-native';
 import { StepIndicator, Chip } from '@/src/components/custom';
 import { useOnboardingStore } from '@/src/app/stores/useOnboardingStore';
+import { getIconByName } from '@/src/utils';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { OnboardingStackParamList } from '@/src/navigation/types';
-
-// Helper to get icon component from string name
-function getIconByName(iconName: string) {
-  const icons = LucideIcons as unknown as Record<string, React.ComponentType<any>>;
-  return icons[iconName] || LucideIcons.Circle;
-}
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'Categories'>;
 
