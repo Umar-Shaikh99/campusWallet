@@ -175,14 +175,20 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: undefined,
-        body: undefined,
-        mono: undefined,
-        jakarta: ['var(--font-plus-jakarta-sans)'],
-        roboto: ['var(--font-roboto)'],
-        code: ['var(--font-source-code-pro)'],
-        inter: ['var(--font-inter)'],
-        'space-mono': ['var(--font-space-mono)'],
+        // Clear Student Pro Typography - Using exact font file names for React Native
+        heading: ['Montserrat-SemiBold'],           // For headings and numbers
+        body: ['Inter-Regular'],                    // For body text
+        mono: ['SpaceMono-Regular'],
+        // Montserrat variants
+        montserrat: ['Montserrat-Regular'],
+        'montserrat-medium': ['Montserrat-Medium'],
+        'montserrat-semibold': ['Montserrat-SemiBold'],
+        'montserrat-bold': ['Montserrat-Bold'],
+        // Inter variants
+        inter: ['Inter-Regular'],
+        'inter-medium': ['Inter-Medium'],
+        'inter-semibold': ['Inter-SemiBold'],
+        'inter-bold': ['Inter-Bold'],
       },
       fontWeight: {
         extrablack: '950',

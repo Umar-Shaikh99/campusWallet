@@ -24,9 +24,10 @@ export function HomeScreen() {
   const userName = onboardingData.userName || 'User';
   const budget = onboardingData.monthlyBudget;
 
+  // Quick Add - pre-selects category
   const handleQuickAdd = (category: ExpenseCategory) => {
     navigation.navigate('AddExpense', {
-      screen: 'AddExpenseAmount',
+      screen: 'AddExpense',
       params: {
         categoryId: category.id,
         categoryName: category.name,
@@ -35,21 +36,20 @@ export function HomeScreen() {
     });
   };
 
+  // FAB - opens without pre-selected category (shows category picker)
   const handleFABPress = () => {
-    // Use first category as default or a generic one
-    const defaultCategory = onboardingData.selectedCategories[0] || {
-      id: 'other',
-      name: 'Other',
-      icon: 'CircleDollarSign',
-    };
     navigation.navigate('AddExpense', {
-      screen: 'AddExpenseAmount',
-      params: {
-        categoryId: defaultCategory.id,
-        categoryName: defaultCategory.name,
-        categoryIcon: defaultCategory.icon,
-      },
+      screen: 'AddExpense',
+      params: {},
     });
+  };
+
+  const handleExpensePress = (expense: { id: string }) => {
+    navigation.navigate('ExpenseDetail', { expenseId: expense.id });
+  };
+
+  const handleViewAll = () => {
+    navigation.navigate('CategoriesList');
   };
 
   return (
@@ -65,7 +65,11 @@ export function HomeScreen() {
             onCategoryPress={handleQuickAdd}
           />
 
-          <RecentExpensesSection expenses={recentExpenses} />
+          <RecentExpensesSection 
+            expenses={recentExpenses} 
+            onExpensePress={handleExpensePress}
+            onViewAll={handleViewAll}
+          />
         </View>
       </ScrollView>
 

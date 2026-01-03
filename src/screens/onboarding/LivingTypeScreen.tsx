@@ -19,13 +19,13 @@ export function LivingTypeScreen({ navigation }: Props) {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-background-950">
+    <SafeAreaView className="flex-1 bg-background-50">
       <View className="flex-1 px-6 pt-4">
         {/* Step indicator */}
         <StepIndicator totalSteps={4} currentStep={3} />
 
         {/* Title */}
-        <Text className="mt-8 mb-6 text-2xl font-bold text-typography-50">
+        <Text className="mt-8 mb-6 text-2xl text-typography-900 font-heading">
           Select Your Living Type
         </Text>
 
@@ -45,7 +45,7 @@ export function LivingTypeScreen({ navigation }: Props) {
           />
         </View>
 
-        <Text className="text-sm text-typography-500">
+        <Text className="text-sm text-typography-500 font-body">
           This helps customize expense categories for you
         </Text>
 
@@ -55,10 +55,10 @@ export function LivingTypeScreen({ navigation }: Props) {
         <Button 
           size="xl" 
           action="primary"
-          className="w-full rounded-full bg-primary-500 mb-6"
+          className="w-full rounded-full bg-primary-600 mb-6"
           onPress={handleContinue}
         >
-          <ButtonText className="text-lg font-semibold">Continue</ButtonText>
+          <ButtonText className="text-lg text-white font-inter-semibold">Continue</ButtonText>
         </Button>
       </View>
     </SafeAreaView>

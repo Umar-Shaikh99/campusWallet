@@ -33,10 +33,10 @@ export function SelectionCard({
   label,
   description,
   isSelected = false,
-  selectedBorderColor = 'border-primary-500',
-  selectedBgColor = 'bg-primary-500/10',
-  unselectedBorderColor = 'border-outline-600',
-  unselectedBgColor = 'bg-background-900',
+  selectedBorderColor = 'border-primary-600',
+  selectedBgColor = 'bg-primary-50',
+  unselectedBorderColor = 'border-outline-200',
+  unselectedBgColor = 'bg-background-0',
   iconSize = 'xl',
   showCheckmark = true,
   className = '',
@@ -60,20 +60,20 @@ export function SelectionCard({
       {/* Icon container */}
       <View
         className={`mb-3 rounded-xl p-3 ${
-          isSelected ? 'bg-primary-500/20' : 'bg-background-800'
+          isSelected ? 'bg-primary-100' : 'bg-background-100'
         }`}
       >
         <Icon
           as={icon}
           size={iconSize}
-          className={isSelected ? 'text-primary-500' : 'text-typography-400'}
+          className={isSelected ? 'text-primary-600' : 'text-typography-500'}
         />
       </View>
 
       {/* Label */}
       <Text
         className={`text-center text-sm font-medium ${
-          isSelected ? 'text-primary-400' : 'text-typography-300'
+          isSelected ? 'text-primary-600' : 'text-typography-700'
         }`}
       >
         {label}

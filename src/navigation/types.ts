@@ -13,23 +13,10 @@ export type OnboardingStackParamList = {
 
 // Add Expense Stack Navigator param list
 export type AddExpenseStackParamList = {
-  AddExpenseAmount: {
-    categoryId: string;
-    categoryName: string;
-    categoryIcon: string;
-  };
-  AddExpenseDetails: {
-    amount: number;
-    categoryId: string;
-    categoryName: string;
-    categoryIcon: string;
-  };
-  AddExpenseSuccess: {
-    amount: number;
-    categoryName: string;
-    categoryIcon: string;
-    note: string;
-    date: string;
+  AddExpense: {
+    categoryId?: string;
+    categoryName?: string;
+    categoryIcon?: string;
   };
 };
 
@@ -46,6 +33,15 @@ export type RootStackParamList = {
   Onboarding: NavigatorScreenParams<OnboardingStackParamList>;
   MainTabs: NavigatorScreenParams<BottomTabParamList>;
   AddExpense: NavigatorScreenParams<AddExpenseStackParamList>;
+  ExpenseDetail: { expenseId: string };
+  EditExpense: { expenseId: string };
+  CategoriesList: undefined;
+  CategoryExpenses: {
+    categoryId: string;
+    categoryName: string;
+    categoryIcon: string;
+  };
+  ManageCategories: undefined;
 };
 
 // Screen props types

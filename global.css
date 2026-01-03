@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark theme CSS variables for gluestack/nativewind */
+/* Clear Student Pro Theme - Trustworthy, Clean, Financially Serious */
 :root {
-  /* Background colors */
+  /* Background colors - Light Gray (#F8FAFC) based palette */
   --color-background-0: 255 255 255;
   --color-background-50: 248 250 252;
   --color-background-100: 241 245 249;
@@ -18,33 +18,33 @@
   --color-background-900: 15 23 42;
   --color-background-950: 2 6 23;
   
-  /* Primary colors */
+  /* Primary colors - Deep Blue (#2563EB) for buttons and CTAs */
   --color-primary-0: 255 255 255;
-  --color-primary-50: 240 249 255;
-  --color-primary-100: 224 242 254;
-  --color-primary-200: 186 230 253;
-  --color-primary-300: 125 211 252;
-  --color-primary-400: 56 189 248;
-  --color-primary-500: 14 165 233;
-  --color-primary-600: 2 132 199;
-  --color-primary-700: 3 105 161;
-  --color-primary-800: 7 89 133;
-  --color-primary-900: 12 74 110;
-  --color-primary-950: 8 47 73;
+  --color-primary-50: 239 246 255;
+  --color-primary-100: 219 234 254;
+  --color-primary-200: 191 219 254;
+  --color-primary-300: 147 197 253;
+  --color-primary-400: 96 165 250;
+  --color-primary-500: 59 130 246;
+  --color-primary-600: 37 99 235;
+  --color-primary-700: 29 78 216;
+  --color-primary-800: 30 64 175;
+  --color-primary-900: 30 58 138;
+  --color-primary-950: 23 37 84;
 
-  /* Secondary colors */
+  /* Secondary colors - Slate for subtle UI elements */
   --color-secondary-0: 255 255 255;
-  --color-secondary-50: 250 245 255;
-  --color-secondary-100: 245 238 255;
-  --color-secondary-200: 233 213 255;
-  --color-secondary-300: 216 180 254;
-  --color-secondary-400: 192 132 252;
-  --color-secondary-500: 168 85 247;
-  --color-secondary-600: 147 51 234;
-  --color-secondary-700: 126 34 206;
-  --color-secondary-800: 107 33 168;
-  --color-secondary-900: 88 28 135;
-  --color-secondary-950: 59 7 100;
+  --color-secondary-50: 248 250 252;
+  --color-secondary-100: 241 245 249;
+  --color-secondary-200: 226 232 240;
+  --color-secondary-300: 203 213 225;
+  --color-secondary-400: 148 163 184;
+  --color-secondary-500: 100 116 139;
+  --color-secondary-600: 71 85 105;
+  --color-secondary-700: 51 65 85;
+  --color-secondary-800: 30 41 59;
+  --color-secondary-900: 15 23 42;
+  --color-secondary-950: 2 6 23;
   
   /* Typography colors */
   --color-typography-0: 255 255 255;
@@ -74,19 +74,19 @@
   --color-outline-900: 15 23 42;
   --color-outline-950: 2 6 23;
 
-  /* Status colors */
+  /* Status colors - Bold Green (#10B981) for savings/positive indicators */
   --color-success-0: 255 255 255;
-  --color-success-50: 240 253 244;
-  --color-success-100: 220 252 231;
-  --color-success-200: 187 247 208;
-  --color-success-300: 134 239 172;
-  --color-success-400: 74 222 128;
-  --color-success-500: 34 197 94;
-  --color-success-600: 22 163 74;
-  --color-success-700: 21 128 61;
-  --color-success-800: 22 101 52;
-  --color-success-900: 20 83 45;
-  --color-success-950: 5 46 22;
+  --color-success-50: 236 253 245;
+  --color-success-100: 209 250 229;
+  --color-success-200: 167 243 208;
+  --color-success-300: 110 231 183;
+  --color-success-400: 52 211 153;
+  --color-success-500: 16 185 129;
+  --color-success-600: 5 150 105;
+  --color-success-700: 4 120 87;
+  --color-success-800: 6 95 70;
+  --color-success-900: 6 78 59;
+  --color-success-950: 2 44 34;
 
   --color-error-0: 255 255 255;
   --color-error-50: 254 242 242;
