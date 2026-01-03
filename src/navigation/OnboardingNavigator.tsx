@@ -1,11 +1,12 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
-  WelcomeScreen,
-  ProfileSetupScreen,
-  BudgetSetupScreen,
-  LivingTypeScreen,
-  CategoriesScreen,
+  IntroFinancesScreen,
+  IntroTrackingScreen,
+  IntroCustomizationScreen,
+  HousingSituationScreen,
+  CategorySetupScreen,
+  FinalDetailsScreen,
 } from '@/src/screens/onboarding';
 import type { OnboardingStackParamList } from './types';
 
@@ -19,11 +20,16 @@ export function OnboardingNavigator() {
         animation: 'slide_from_right',
       }}
     >
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="ProfileSetup" component={ProfileSetupScreen} />
-      <Stack.Screen name="BudgetSetup" component={BudgetSetupScreen} />
-      <Stack.Screen name="LivingType" component={LivingTypeScreen} />
-      <Stack.Screen name="Categories" component={CategoriesScreen} />
+      {/* Intro screens */}
+      <Stack.Screen name="IntroFinances" component={IntroFinancesScreen} />
+      <Stack.Screen name="IntroTracking" component={IntroTrackingScreen} />
+      <Stack.Screen name="IntroCustomization" component={IntroCustomizationScreen} />
+      {/* New onboarding flow */}
+      <Stack.Screen name="HousingSituation" component={HousingSituationScreen} />
+      <Stack.Screen name="CategorySetup" component={CategorySetupScreen} />
+      <Stack.Screen name="FinalDetails" component={FinalDetailsScreen} />
     </Stack.Navigator>
   );
 }
+
+

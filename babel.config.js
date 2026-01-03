@@ -1,6 +1,7 @@
 module.exports = {
   presets: ['module:@react-native/babel-preset', 'nativewind/babel'],
   plugins: [
+    '@babel/plugin-transform-export-namespace-from',
     [
       'module-resolver',
       {
@@ -14,3 +15,4 @@ module.exports = {
     'react-native-reanimated/plugin',
   ],
 };
+
