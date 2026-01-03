@@ -4,11 +4,12 @@ import type { CompositeScreenProps, NavigatorScreenParams } from '@react-navigat
 
 // Onboarding Stack Navigator param list
 export type OnboardingStackParamList = {
-  Welcome: undefined;
-  ProfileSetup: undefined;
-  BudgetSetup: undefined;
-  LivingType: undefined;
-  Categories: undefined;
+  IntroFinances: undefined;
+  IntroTracking: undefined;
+  IntroCustomization: undefined;
+  HousingSituation: undefined;
+  CategorySetup: undefined;
+  FinalDetails: undefined;
 };
 
 // Add Expense Stack Navigator param list

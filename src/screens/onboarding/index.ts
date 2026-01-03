@@ -1,5 +1,9 @@
-export { WelcomeScreen } from './WelcomeScreen';
-export { ProfileSetupScreen } from './ProfileSetupScreen';
-export { BudgetSetupScreen } from './BudgetSetupScreen';
-export { LivingTypeScreen } from './LivingTypeScreen';
-export { CategoriesScreen } from './CategoriesScreen';
+export { IntroFinancesScreen } from './IntroFinancesScreen';
+export { IntroTrackingScreen } from './IntroTrackingScreen';
+export { IntroCustomizationScreen } from './IntroCustomizationScreen';
+export { HousingSituationScreen } from './HousingSituationScreen';
+export { CategorySetupScreen } from './CategorySetupScreen';
+export { FinalDetailsScreen } from './FinalDetailsScreen';
+
+
+

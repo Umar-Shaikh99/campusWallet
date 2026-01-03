@@ -13,6 +13,7 @@
     "@expo/html-elements": "^0.10.1",
     "@gluestack-ui/core": "^3.0.12",
     "@gluestack-ui/utils": "^3.0.13",
+    "@hookform/resolvers": "^5.2.2",
     "@legendapp/motion": "^2.5.3",
     "@react-native-community/datetimepicker": "^8.5.1",
     "@react-native/new-app-screen": "0.83.0",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-export-namespace-from": "^7.27.1",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "20.0.0",
