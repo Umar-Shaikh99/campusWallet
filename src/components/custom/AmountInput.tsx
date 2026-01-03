@@ -41,9 +41,9 @@ export function AmountInput({
   return (
     <View className={`gap-4 ${className}`}>
       {/* Input field */}
-      <View className="flex-row items-center rounded-2xl border-2 border-primary-500 bg-background-900 px-6 py-5">
-        <View className="mr-4 rounded-lg bg-primary-500/20 px-3 py-2">
-          <Text className="text-xl font-bold text-primary-400">
+      <View className="flex-row items-center rounded-2xl border-2 border-primary-600 bg-background-0 px-6 py-5">
+        <View className="mr-4 rounded-lg bg-primary-100 px-3 py-2">
+          <Text className="text-xl text-primary-600 font-montserrat-bold">
             {currencySymbol}
           </Text>
         </View>
@@ -51,16 +51,16 @@ export function AmountInput({
           value={value > 0 ? value.toString() : ''}
           onChangeText={handleTextChange}
           placeholder={placeholder}
-          placeholderTextColor="#64748b"
+          placeholderTextColor="#94a3b8"
           keyboardType="numeric"
-          className="flex-1 text-center text-4xl font-bold text-typography-100"
+          className="flex-1 text-center text-4xl text-typography-900 font-montserrat-bold"
           {...inputProps}
         />
       </View>
 
       {/* Helper text */}
       {helperText && (
-        <Text className="text-center text-sm text-typography-500">
+        <Text className="text-center text-sm text-typography-500 font-body">
           {helperText}
         </Text>
       )}
@@ -76,13 +76,13 @@ export function AmountInput({
                 onPress={() => onChange(preset)}
                 className={`rounded-full px-5 py-3 ${
                   isSelected
-                    ? 'bg-primary-500'
-                    : 'border border-outline-600 bg-background-800'
+                    ? 'bg-primary-600'
+                    : 'border border-outline-200 bg-background-0'
                 }`}
               >
                 <Text
-                  className={`text-sm font-semibold ${
-                    isSelected ? 'text-white' : 'text-typography-300'
+                  className={`text-sm font-inter-semibold ${
+                    isSelected ? 'text-white' : 'text-typography-700'
                   }`}
                 >
                   {formatPreset(preset)}

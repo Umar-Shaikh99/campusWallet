@@ -34,10 +34,10 @@ export function Chip({
   icon,
   variant = 'filled',
   size = 'md',
-  bgColor = 'bg-background-800',
-  borderColor = 'border-outline-600',
-  textColor = 'text-typography-200',
-  iconColor = 'text-typography-400',
+  bgColor = 'bg-background-100',
+  borderColor = 'border-outline-200',
+  textColor = 'text-typography-700',
+  iconColor = 'text-typography-500',
   className = '',
   ...viewProps
 }: ChipProps) {

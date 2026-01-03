@@ -2,21 +2,14 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text, View } from 'react-native';
 import { Icon } from '@/src/components/ui/icon';
-import { Home, BarChart3, Wallet, User } from 'lucide-react-native';
+import { Home, BarChart3, Wallet, Settings } from 'lucide-react-native';
 import type { BottomTabParamList } from './types';
 
 // Screens
 import { HomeScreen } from '@/src/screens/home';
+import { InsightsScreen } from '@/src/screens/insights';
+import { SettingsScreen } from '@/src/screens/settings';
 
-// Placeholder screens
-function AnalyticsScreen() {
-  return (
-    <View className="flex-1 items-center justify-center bg-background-950">
-      <Text className="text-xl font-bold text-typography-50">Analytics</Text>
-      <Text className="text-typography-500 mt-2">Coming soon</Text>
-    </View>
-  );
-}
 
 function WalletScreen() {
   return (
@@ -27,14 +20,7 @@ function WalletScreen() {
   );
 }
 
-function ProfileScreen() {
-  return (
-    <View className="flex-1 items-center justify-center bg-background-950">
-      <Text className="text-xl font-bold text-typography-50">Profile</Text>
-      <Text className="text-typography-500 mt-2">Coming soon</Text>
-    </View>
-  );
-}
+// ProfileScreen placeholder removed - now using SettingsScreen
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -70,9 +56,9 @@ export function BottomTabNavigator() {
       />
       <Tab.Screen
         name="Analytics"
-        component={AnalyticsScreen}
+        component={InsightsScreen}
         options={{
-          tabBarLabel: 'Analytics',
+          tabBarLabel: 'Insights',
           tabBarIcon: ({ color, size }) => (
             <Icon as={BarChart3} size="md" style={{ color }} />
           ),
@@ -90,11 +76,11 @@ export function BottomTabNavigator() {
       />
       <Tab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={SettingsScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Settings',
           tabBarIcon: ({ color, size }) => (
-            <Icon as={User} size="md" style={{ color }} />
+            <Icon as={Settings} size="md" style={{ color }} />
           ),
         }}
       />

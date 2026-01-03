@@ -20,12 +20,12 @@ export function CategoriesScreen({ navigation }: Props) {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-background-950">
+    <SafeAreaView className="flex-1 bg-background-50">
       <View className="flex-1 px-6 pt-4">
         {/* Header with back button and step indicator */}
         <View className="flex-row items-center mb-6">
           <Pressable onPress={() => navigation.goBack()} className="p-2">
-            <Icon as={ArrowLeft} size="md" className="text-typography-300" />
+            <Icon as={ArrowLeft} size="md" className="text-typography-600" />
           </Pressable>
           <View className="flex-1">
             <StepIndicator totalSteps={4} currentStep={4} />
@@ -34,7 +34,7 @@ export function CategoriesScreen({ navigation }: Props) {
         </View>
 
         {/* Title */}
-        <Text className="mb-6 text-center text-2xl font-bold text-typography-50">
+        <Text className="mb-6 text-center text-2xl text-typography-900 font-heading">
           Your Default Expense{'\n'}Categories
         </Text>
 
@@ -47,7 +47,7 @@ export function CategoriesScreen({ navigation }: Props) {
           ))}
         </View>
 
-        <Text className="mt-6 text-center text-sm text-typography-500">
+        <Text className="mt-6 text-center text-sm text-typography-500 font-body">
           These categories are set based on your living type. You can edit them later.
         </Text>
 
@@ -57,17 +57,17 @@ export function CategoriesScreen({ navigation }: Props) {
         <Button 
           size="xl" 
           action="primary"
-          className="w-full rounded-full bg-primary-500 mb-4"
+          className="w-full rounded-full bg-primary-600 mb-4"
           onPress={handleStartTracking}
         >
-          <ButtonText className="text-lg font-semibold">Start Tracking!</ButtonText>
+          <ButtonText className="text-lg text-white font-inter-semibold">Start Tracking!</ButtonText>
           <Icon as={ArrowRight} size="md" className="text-white ml-2" />
         </Button>
 
         {/* Branding */}
         <View className="flex-row items-center justify-center mb-4">
-          <Icon as={Wallet} size="sm" className="text-typography-600 mr-2" />
-          <Text className="text-sm text-typography-600 tracking-wider">CAMPUSWALLET</Text>
+          <Icon as={Wallet} size="sm" className="text-primary-600 mr-2" />
+          <Text className="text-sm text-typography-500 tracking-wider font-montserrat-semibold">CAMPUSWALLET</Text>
         </View>
       </View>
     </SafeAreaView>

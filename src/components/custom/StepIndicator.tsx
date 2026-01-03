@@ -23,9 +23,9 @@ interface StepIndicatorProps {
 export function StepIndicator({
   totalSteps,
   currentStep,
-  activeColor = 'bg-primary-500',
+  activeColor = 'bg-primary-600',
   completedColor = 'bg-primary-400',
-  inactiveColor = 'bg-outline-600',
+  inactiveColor = 'bg-outline-200',
   activeWidth = 'w-6',
   inactiveWidth = 'w-2',
   className = '',
